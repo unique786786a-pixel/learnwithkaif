@@ -1,0 +1,232 @@
+# BrandNest Portfolio Website: Build Prompt
+
+> Paste everything below this line into your AI builder (Claude Code, Cursor, v0, Lovable, Bolt, etc.).
+> **Also attach:** (1) the BrandNest logo image, (2) a screenshot of the Dribbble reference shot ("Carlos – Personal Portfolio Website").
+
+---
+
+## ROLE
+
+You are a senior product designer and front-end engineer who builds award-quality portfolio sites for creative studios. Build a **premium, conversion-focused one-page portfolio website** for **BrandNest — Digital Growth Studio**, a freelance digital marketing and creative studio run by **Kaif**.
+
+The site must feel like a boutique creative studio, **not** a generic agency template.
+
+---
+
+## 1. BRAND
+
+| | |
+|---|---|
+| Name | **BrandNest** |
+| Tagline (from logo) | **Where brands grow.** |
+| Descriptor | Digital Growth Studio |
+| Founder | Kaif |
+| Positioning | BrandNest helps small and local businesses, startups, creators and growing brands improve their branding, social media, content, websites and online visibility, and turn attention into enquiries. |
+| Personality | Modern, creative, professional, friendly, young, strategic, results-oriented |
+
+### Logo (attached image)
+- Black background, **gold 3D ribbon-fold "B" monogram** with an **"N" and an upward arrow** inside it (growth symbol).
+- Wordmark: **BRAND** in white + **NEST** in gold gradient, wide-tracked geometric sans caps.
+- Tagline "WHERE BRANDS GROW." in thin, widely-spaced caps.
+- Recreate the monogram as a clean **SVG** (or use the attached image) for the navbar, footer, favicon and Open Graph image.
+- Echo the logo's **white + gold split** in headlines: one key word per heading in the gold gradient.
+- Use the **upward-arrow motif** sparingly as a growth cue (CTA arrows, step connectors, stat counters).
+
+---
+
+## 2. VISUAL REFERENCE
+
+Use the attached Dribbble screenshot as the **mood and layout-quality reference only**: dark, clean, minimal, card-based, a single warm yellow accent, generous spacing, confident oversized type. **Do not copy it.** Make it unmistakably BrandNest by using the gold ribbon identity from the logo.
+
+### Design system
+
+| Token | Value |
+|---|---|
+| Background | `#0A0A0A` (near-black, matches logo) |
+| Surface / cards | `#141414`, border `rgba(255,255,255,0.08)` |
+| Text | `#F5F5F0` |
+| Muted text | `#A1A1AA` |
+| Gold accent | `#F4C24B` |
+| Gold gradient | `linear-gradient(135deg, #FFD76A 0%, #E8A93A 50%, #B87A1B 100%)` |
+| Optional light section | `#F5F2EA` with black text, for 1–2 contrast breaks (e.g. Process or Pricing) |
+
+- **Gold is used sparingly:** primary CTAs, one highlighted word per heading, key numbers, hover states, thin dividers. It should never wash over the page.
+- **Typography:** *Manrope* or *Inter* for body. A bold geometric sans for headings with tight tracking. Oversized hero (clamp ~48px mobile → ~110px desktop). Section labels in small, widely-tracked caps (echoing the logo tagline).
+- **Layout:** editorial grid, strong hierarchy, big whitespace, subtle noise or grain, soft gold radial glow behind the hero visual. Cards with 16–20px radius, thin borders, subtle glass where it helps. **Avoid** neon, heavy gradients, stock photography, emoji overload and "pill-card everything".
+
+---
+
+## 3. GOAL AND CTAs
+
+Primary goal: **turn visitors into WhatsApp enquiries and free-audit requests.**
+
+- **Primary CTA:** *Get a Free Digital Growth Audit →*
+- **Secondary CTA:** *See Our Work*
+- **Persistent CTA:** floating WhatsApp button, *Chat with Kaif*, opening `https://wa.me/<NUMBER>?text=` with the pre-filled message: *"Hi Kaif, I found BrandNest and I'd like to discuss improving my business's digital presence."*
+
+Visitor journey: **Attention → Problem → Solution → Proof → Process → Trust → Offer → Action.** Repeat the primary CTA naturally in at least 5 places.
+
+---
+
+## 4. AUDIENCE AND VOICE
+
+**Audience:** local business owners (cafés, restaurants, salons, gyms, clinics, boutiques, real estate, coaches), startups, personal brands. Many are non-technical.
+
+**Voice:** confident, not arrogant. Professional, not corporate. Friendly, not childish. Plain business language, **no jargon**.
+- Say: *"Turn your online presence into a steady source of enquiries."*
+- Never say: "leading agency", "revolutionary solutions", "synergistic ecosystem".
+
+---
+
+## 5. PAGE STRUCTURE (in order)
+
+### 5.1 Navbar (sticky)
+Logo mark + wordmark on the left. Links: **Work · Services · Process · About · Contact**. CTA button: **Get Free Audit** (gold). Becomes translucent and blurred on scroll. Hamburger menu on mobile with a full-screen overlay. Thin gold scroll-progress line under the nav.
+
+### 5.2 Hero
+- Label: `BRANDNEST — DIGITAL GROWTH STUDIO`
+- H1: **Your business deserves a better *digital presence.*** (gold gradient on "digital presence")
+- Sub: *We help businesses build stronger brands, create better content, and turn social media into a growth channel.*
+- CTAs: primary + secondary. Credibility line: *Branding • Content • Websites • Social Media • Digital Growth*
+- Microcopy: *We don't just make your business look good online. We build a digital presence designed to get attention, build trust and generate enquiries.*
+- **Right-side visual:** a layered "studio workspace" collage built in CSS/SVG with Instagram post mockups, reel thumbnails, a mini brand board (gold/black palette), a website screen, a WhatsApp chat bubble and a small analytics card. Gentle floating parallax. All placeholder visuals, no fake logos of real brands.
+
+### 5.3 Marquee strip
+Slow, infinite scroll: `BRANDING · SOCIAL MEDIA · REELS · WEBSITES · CREATIVES · WHATSAPP MARKETING · DIGITAL GROWTH` separated by the small arrow glyph. Pause on hover; respect `prefers-reduced-motion`.
+
+### 5.4 Problem
+H2: **Good businesses often look invisible online.**
+Intro: *A business can have great products and service but still struggle to attract customers if its online presence looks inconsistent, outdated or inactive.*
+Three cards:
+1. **Inconsistent branding.** Your Instagram, website, logo and promotions don't feel like the same brand.
+2. **Content that doesn't convert.** Posting regularly isn't enough. Content must capture attention and communicate value.
+3. **Missed digital opportunities.** Customers search for you, can't find what they need, and leave.
+
+Bridge line (large, gold underline): **That's where BrandNest comes in.**
+
+### 5.5 Services
+H2: **Everything your brand needs to grow online.**
+Cards (title · one-line promise · 4–6 includes · text CTA). Make the layout a bento/asymmetric grid, not 7 identical boxes.
+
+| Service | Promise | Includes |
+|---|---|---|
+| Branding | Build a recognizable, professional identity. | Logo direction, colors, typography, visual identity, brand guidelines |
+| Social Media Content | Look active, consistent and professional. | Posts, carousels, stories, content planning, captions, strategy |
+| Reels | Short-form video built to stop the scroll. | Concepts, scripts, editing, hooks, captions, trend adaptation |
+| Promotional Creatives | Turn offers into scroll-stopping visuals. | Sale, product, festival, launch and ad creatives |
+| Websites | Sites that build trust and bring enquiries. | Landing pages, business and portfolio sites, mobile-first, CTA optimization |
+| WhatsApp Marketing | Make WhatsApp a simple conversion channel. | Business setup, catalog, promo messages, customer flows, CTA integration |
+| Digital Business Profiles | Be easier to find online. | Google Business Profile, business info, local presence, contact optimization |
+
+### 5.6 Featured Work
+H2: **Work that makes brands look better.**
+Filter tabs: **All · Branding · Social Media · Reels · Websites · Campaigns**. Each card has a project visual (designed in CSS/SVG as a mockup), name, industry, services and a one-line goal. Click opens a **case-study modal or page**: Concept · Industry · Challenge · Strategy · Creative Direction · Execution · Outcome.
+
+Projects (**all must carry a visible "Concept Project" badge**):
+1. **Urban Brew Café** — Cafe — Branding + Instagram + Reels
+2. **FitCore Studio** — Fitness — Social Media + Reels + Promotional Creatives
+3. **Aurelia Beauty** — Beauty — Brand Identity + Instagram + Promo Campaign
+4. **HomeCraft Interiors** — Interior Design — Website + Branding + Social Media
+
+Outcome text for every concept (no fake metrics): *"Designed to improve brand consistency, visibility and customer trust."*
+
+### 5.7 Before / After
+H2: **A better digital presence changes perception.**
+Drag-handle comparison slider (touch-friendly, keyboard-accessible).
+- Before: inconsistent graphics, weak profile, poor hierarchy, generic promos.
+- After: consistent branding, professional content, stronger identity, clear CTAs.
+
+### 5.8 Industries
+H2: **Built for businesses that want to grow.** Eight compact cards with simple line icons (not emoji): Cafes & Restaurants · Salons & Beauty · Gyms & Fitness · Real Estate · Retail & Fashion · Clinics & Professionals · Coaches & Educators · Startups & Personal Brands.
+Closing line: **If your customers are online, your business should be too.**
+
+### 5.9 Process
+H2: **Simple process. Serious execution.** Four steps with an animated connecting line that draws on scroll:
+**01 Discover** (business, customers, competitors, goals) → **02 Strategy** (opportunities and a practical growth plan) → **03 Create** (content, campaigns, website, assets) → **04 Grow** (refine from performance and feedback).
+
+### 5.10 Why BrandNest
+H2: **Why businesses choose BrandNest.** Five points: *Strategy + Creativity · Built for Your Business (no copy-paste templates) · Simple Communication (no jargon) · One Creative Partner · Growth-Focused.*
+Make this funnel visually prominent: **Attention → Trust → Enquiries → Customers** as a horizontal flow with the gold arrow motif.
+
+### 5.11 Results (flexible)
+A stats row with four counters (Projects Completed, Creative Assets, Businesses Supported, Campaign Improvement), driven by a content file. **Do not invent numbers.** Ship with `XX` placeholders and a code comment: `// Replace these placeholders only with verified numbers.` Hide the section automatically if values are not set.
+
+### 5.12 Testimonials
+Carousel component driven by a data file. If no real testimonials exist, render instead: **"Currently building our client success stories."** with CTA **"Be one of our first featured success stories →"**. Any placeholder quote must be flagged `placeholder: true` in data and never shown publicly.
+
+### 5.13 Packages
+Three cards: **Starter · Growth (highlighted) · Custom**.
+- Starter: social profile optimization, basic branding direction, monthly content, promotional creatives. CTA *Start Growing →*
+- Growth: content strategy, social content, reels, promotional creatives, WhatsApp marketing, monthly strategy. CTA *Choose Growth →*
+- Custom: branding, website, social, content, reels, digital marketing, custom strategy. CTA *Let's Build Your Brand →*
+
+Price on every card: **Custom Quote** (no fake pricing; make price a data field Kaif can fill in later).
+
+### 5.14 Free Audit (strongest conversion block)
+H2: **Want to know what's holding your digital presence back?**
+Text: *We'll take a quick look at your online presence and share practical opportunities to improve your branding, content and customer journey.*
+Form fields: Name · Business Name · Business Type · Instagram / Website · WhatsApp Number · What do you need help with?
+Button: **Request My Free Audit**. Validate inputs, show an inline loading state, then success message: **"Thanks! We'll review your digital presence and get back to you."**
+Submission: send via a configurable endpoint (Formspree / Web3Forms / API route), **plus** an option to open WhatsApp with the form details pre-filled. Never expose keys in client code.
+
+### 5.15 FAQ
+Accessible accordion (one open at a time):
+- What type of businesses do you work with?
+- Do you only manage Instagram?
+- Do you offer custom packages?
+- Can you work with a small business?
+- Do you provide websites?
+- How do we get started?
+
+Use the answers from the brand voice: short, friendly, plain-language. The last answer points to the free audit.
+
+### 5.16 Final CTA
+Full-width dark section with a large gold ribbon-shape glow. H2: **Let's make your brand impossible to ignore.** Sub: *Your business already has something valuable. Let's make sure the internet knows about it.* Buttons: **Get a Free Digital Growth Audit →** and **Chat on WhatsApp**.
+
+### 5.17 Footer
+Logo, *Digital Growth Studio*, line: *Helping businesses build better brands and stronger digital presence.* Columns: Navigation · Services · Contact. Contact fields (Email, WhatsApp, Instagram, LinkedIn) are **placeholders read from config. Do not invent contact details.** `© 2026 BrandNest. All rights reserved.`
+
+---
+
+## 6. MOTION
+
+Subtle and premium. Page-load: hero text staggers in, hero collage settles into place. Scroll: sections fade/slide up 16–24px, counters count up once, process line draws. Hover: card lift, image zoom 1.03, button arrow nudge. Use CSS/Framer Motion, `IntersectionObserver`, and **honor `prefers-reduced-motion`**. No heavy libraries, no parallax overload.
+
+---
+
+## 7. TECH
+
+- **Stack:** Next.js (App Router) + TypeScript + Tailwind CSS. *(If your tool can't do this, deliver a single-file HTML/CSS/JS site with the same structure.)*
+- **Components:** Navbar, Hero, TrustMarquee, ProblemSection, Services, Portfolio, CaseStudyModal, BeforeAfter, Industries, Process, WhyBrandNest, Results, Testimonials, Packages, AuditForm, FAQ, FinalCTA, Footer, WhatsAppButton.
+- **Editable content (no hard-coding):** a `/content` folder with `site.ts` (brand, contact, social, WhatsApp number, message), `services.ts`, `projects.ts`, `testimonials.ts`, `stats.ts`, `packages.ts`, `faq.ts`. Include a README section: *"How Kaif updates content."*
+- **Config:** `NEXT_PUBLIC_WHATSAPP_NUMBER` and form endpoint as env vars.
+- **Performance:** target Lighthouse 90+. `next/image`, lazy loading, AVIF/WebP, minimal client JS, `font-display: swap`, no layout shift.
+- **SEO:** one H1, logical H2/H3, semantic landmarks, JSON-LD (`ProfessionalService`), Open Graph and Twitter cards, favicon from the monogram, sitemap, robots.txt.
+  - Title: *BrandNest — Digital Marketing & Growth Studio*
+  - Description: *BrandNest helps businesses build stronger brands, better social media content, websites and digital growth strategies. Get a free digital growth audit.*
+  - Keywords to weave naturally into copy: digital marketing freelancer (primary), social media marketing, branding services, Instagram marketing, website design, digital marketing for small businesses, digital marketing freelancer India.
+- **Accessibility:** WCAG AA contrast (check gold on black and black on gold), visible focus rings, keyboard-operable accordion, slider, carousel and modal, alt text, 44px tap targets.
+
+---
+
+## 8. RESPONSIVE
+
+Design mobile intentionally, not as a shrunken desktop. Impactful hero headline on mobile, collage simplified to 2–3 key elements, portfolio as a clean vertical stack, sticky bottom bar on mobile with **WhatsApp** and **Free Audit**, thumb-friendly buttons. Test at 360, 390, 768, 1024, 1440 px.
+
+---
+
+## 9. AUTHENTICITY RULES (non-negotiable)
+
+Do **not** fabricate clients, reviews, revenue numbers, follower counts, campaign results, awards, partnerships, certifications or case-study metrics. Where real data is missing, use a clearly marked state: **Concept Project / Sample Work / Coming Soon**. Honest positioning builds trust.
+
+---
+
+## 10. DELIVERABLES AND DEFINITION OF DONE
+
+1. A working, responsive site matching the structure above.
+2. Logo-faithful branding (black + gold, white/gold split wordmark, arrow motif).
+3. All content editable from `/content`.
+4. A short README: setup, env vars, how to edit content, how to deploy (Vercel).
+5. Brief final note listing any assumptions and placeholders Kaif must replace (WhatsApp number, email, Instagram, LinkedIn, real projects, testimonials, stats, pricing).
+
+**Final impression to achieve:** *"This person understands branding, content, websites and digital growth as one complete system."* Creative thinking + marketing strategy + professional execution, in a premium black-and-gold boutique studio feel.
