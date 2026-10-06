@@ -1,0 +1,81 @@
+ROLE
+You are a senior product designer and front-end engineer. Build a premium, conversion-focused portfolio website for BrandNest, a freelance digital marketing and creative growth studio run by Kaif. It should feel like a boutique studio, not a generic agency template.
+
+VISUAL REFERENCE
+Match the layout quality, spacing, typographic scale and motion feel of the attached screenshot / this Dribbble shot: https://dribbble.com/shots/26370209-Personal-Portfolio-Website
+Take inspiration from its structure and polish. Do not copy its content, assets or branding. Where the reference and this brief conflict, follow this brief.
+
+BRAND
+- Name: BrandNest | Descriptor: Digital Growth Studio | Tagline: "Where Brands Grow."
+- Logo: attached image (gold folded "B" with an "N" and an upward arrow, white "BRAND" + gold "NEST" wordmark, black background). Use it as the navbar logo, favicon and footer mark. Create a clean transparent/SVG version of the monogram if possible. Never recolor or distort it.
+- Positioning: BrandNest helps small and local businesses, startups, creators and growing brands improve branding, social media, content, websites and customer acquisition. Kaif works as a hands-on creative partner who executes, not a faceless agency.
+- Voice: confident, friendly, plain-spoken, strategic. No jargon, no "leading agency" or "revolutionary" claims. Example: "We help businesses look better online and turn attention into enquiries."
+
+DESIGN SYSTEM
+- Dark editorial base with light sections for contrast
+  - Background #0B0B0D, surface #141417, text #F5F5F0, muted #A1A1AA
+  - Light section bg #F5F5F0 with ink text #0B0B0D
+  - Accent: brand gold, sampled from the logo (about #F2B544 to #E0A12E gradient, used flat or as a very subtle gradient). Use it sparingly for CTAs, key numbers, underlines, hover states and small details.
+- Typography: Manrope or Inter. Oversized, tight-leading bold headlines (clamp-based fluid sizing), generous whitespace, strong hierarchy.
+- Style: minimal, premium, editorial grids, subtle glassmorphism only on the navbar and floating elements, restrained rounded corners, no stock photos, no heavy gradients.
+- Motion (subtle, fast): hero text fade-up on load, section reveal on scroll, card lift on hover, count-up numbers, marquee, animated process line, scroll progress bar. Respect prefers-reduced-motion.
+
+PAGE STRUCTURE (in order)
+1. Sticky navbar: logo left; Work, Services, Process, About, Contact; gold "Get Free Audit" button. It turns translucent and blurred on scroll, with a clean hamburger menu on mobile.
+2. Hero
+   - Eyebrow: BRANDNEST — DIGITAL GROWTH STUDIO
+   - H1: "Your Business Deserves a Better Digital Presence."
+   - Sub: "We help businesses build stronger brands, create better content, and turn social media into a growth channel."
+   - Primary CTA: "Get a Free Digital Growth Audit →". Secondary: "See Our Work".
+   - Credibility line: Branding • Content • Websites • Social Media • Digital Growth
+   - Microcopy: "We don't just make your business look good online. We build a digital presence designed to get attention, build trust and generate enquiries."
+   - Right side: a floating creative collage built in code (CSS/SVG, no stock photos) with Instagram post mockups, reel thumbnails, a brand identity card, a website screen, a WhatsApp chat mockup and a small analytics widget. Label every mockup as sample content. Add gentle floating animation.
+3. Marquee: BRANDING · SOCIAL MEDIA · REELS · WEBSITES · CREATIVES · WHATSAPP MARKETING · DIGITAL GROWTH
+4. Problem: "Good businesses often look invisible online." Three cards: 01 Inconsistent Branding, 02 Content That Doesn't Convert, 03 Missed Digital Opportunities (use the copy from the content file). Close with "That's where BrandNest comes in."
+5. Services: "Everything your brand needs to grow online." Cards for Branding, Social Media Content, Reels, Promotional Creatives, Websites, WhatsApp Marketing and Digital Business Profiles. Each has a one-line benefit, an "Includes" list and a CTA.
+6. Work: "Work that makes brands look better." Filters: All / Branding / Social Media / Reels / Websites / Campaigns. Cards show name, industry, services and a goal line. Clicking opens a case-study page (/work/[slug]) with: Concept, Industry, Challenge, Strategy, Creative Direction, Execution, Outcome. Demo projects: Urban Brew Café, FitCore Studio, Aurelia Beauty, HomeCraft Interiors. Every one carries a visible "Concept Project" badge. The Outcome text is "Designed to improve brand consistency, visibility and customer trust." until real data exists.
+7. Before/After: "A better digital presence changes perception." Draggable slider (keyboard-accessible) comparing a weak vs. strong Instagram grid, with Before/After checklists.
+8. Industries: "Built for businesses that want to grow." Eight cards (Cafes & Restaurants, Salons & Beauty, Gyms & Fitness, Real Estate, Retail & Fashion, Clinics & Professionals, Coaches & Educators, Startups & Personal Brands). Close with "If your customers are online, your business should be too."
+9. Process: "Simple process. Serious execution." Discover → Strategy → Create → Grow, with an animated connecting line.
+10. Why BrandNest: "Why businesses choose BrandNest." Five points, plus a prominent funnel graphic: Attention → Trust → Enquiries → Customers.
+11. Results: placeholder counters (+XX Projects Completed, XX+ Creative Assets, XX Businesses Supported, XX% Campaign Improvement), hidden behind a config flag until verified. Add a code comment: "Replace only with verified numbers."
+12. Testimonials: carousel driven by data. If the array is empty, show "Currently building our client success stories." with the CTA "Be one of our first featured success stories →". Placeholder entries must be marked internally with placeholder: true and never rendered as real.
+13. Packages: Starter, Growth, Custom, each showing "Custom Quote" (no invented pricing), a feature list and a CTA.
+14. Free Audit (the strongest conversion section)
+   - Headline: "Want to know what's holding your digital presence back?"
+   - Fields: Name, Business Name, Business Type, Instagram/Website, WhatsApp Number, What do you need help with?
+   - Button: "Request My Free Audit". Success message: "Thanks! We'll review your digital presence and get back to you."
+   - Validation, a honeypot spam field, and a submit handler wired to a configurable endpoint (Formspree / Resend / Google Sheets / API route). Also offer "or send this on WhatsApp", which pre-fills the details.
+15. FAQ: accessible accordion with the six questions from the content file.
+16. Final CTA: full-width and dramatic. "Let's make your brand impossible to ignore." Buttons: "Get a Free Digital Growth Audit →" and "Chat on WhatsApp".
+17. Footer: logo, tagline, nav, services, contact placeholders (email, WhatsApp, Instagram, LinkedIn). No invented contact details.
+
+WHATSAPP
+- Floating button labelled "Chat with Kaif", with the subtext "Let's discuss your business." It is visible but unobtrusive: it appears after a short scroll and is smaller on mobile.
+- Link: https://wa.me/<NUMBER>?text=Hi%20Kaif%2C%20I%20found%20BrandNest%20and%20I'd%20like%20to%20discuss%20improving%20my%20business's%20digital%20presence.
+- Keep NUMBER in config, e.g. NEXT_PUBLIC_WHATSAPP_NUMBER.
+
+CONVERSION FLOW
+Attention → Problem → Solution → Proof → Process → Trust → Offer → Action. Repeat the audit CTA and WhatsApp naturally (hero, after services, after work, packages, audit section, final CTA). It should never feel pushy.
+
+AUTHENTICITY RULES (strict)
+Do not invent clients, reviews, followers, revenue, awards, partnerships, certifications or results. Use only the labels "Concept Project", "Sample Work", "Coming Soon" or "Replace with real client result".
+
+TECH STACK
+- Next.js (App Router) + TypeScript + Tailwind CSS, with Framer Motion or CSS animations kept light.
+- Components: Navbar, Hero, TrustMarquee, ProblemSection, Services, Portfolio, CaseStudy, BeforeAfter, Industries, Process, WhyBrandNest, Results, Testimonials, Packages, AuditForm, FAQ, FinalCTA, Footer, WhatsAppButton.
+- Easy editing: all content lives in /content (TypeScript or JSON files): site.ts (brand, contact, socials, WhatsApp), services, projects, testimonials, stats, packages, faq. Kaif should be able to edit the content without touching the components. Make it Sanity/Notion-ready.
+
+SEO, PERFORMANCE AND ACCESSIBILITY
+- Title: "BrandNest — Digital Marketing & Growth Studio"
+- Meta description: "BrandNest helps businesses build stronger brands, better social media content, websites and digital growth strategies. Get a free digital growth audit."
+- Primary keyword: digital marketing freelancer. Secondary: digital marketing for small businesses, social media marketing for local businesses, branding services, Instagram marketing, website design, digital marketing freelancer India.
+- Semantic HTML with a single H1 and proper H2/H3 hierarchy, Open Graph and Twitter tags, favicon from the logo, sitemap, robots.txt, LocalBusiness/ProfessionalService JSON-LD (with no invented address), clean URLs.
+- next/image, lazy loading, AVIF/WebP, next/font, minimal client JS. Target Lighthouse 90+ on performance, with accessibility at 95+ (contrast, focus states, ARIA on the accordion, slider and carousel, 44px tap targets).
+
+RESPONSIVE
+Design mobile intentionally, not as a squeezed desktop. On mobile: a strong, readable hero headline, a stacked collage, a vertical portfolio list, a thumb-friendly sticky bottom CTA, and a full-screen menu.
+
+DELIVERABLES
+1. A complete runnable project with a README (setup, how to edit content, how to connect the form, how to set the WhatsApp number, how to deploy to Vercel).
+2. Briefly explain your design decisions and list the items I must replace with real content (logo files, contact info, real projects, testimonials, stats).
